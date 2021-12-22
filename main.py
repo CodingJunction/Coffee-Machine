@@ -1,7 +1,7 @@
 """Coffee machine water coffee
-1. expresso 50 18 1.5
-2. latte 200 24 150 2.5
-3. cappuccino 250 24 100 3.0
+1. expresso 50 18 
+2. latte 200 24 150 
+3. cappuccino 250 24 100
 
 coin operateed
 1 2 5 10 20
@@ -69,14 +69,14 @@ report - to get details on remaining resources""")
             coffee="latte"
             a,b,c,chk=check(a,b,c,1)
             if chk==0:
-                print('Insufficient quantity 1')
+                print('Insufficient quantity')
                 continue
             p=p2
         elif val=="expresso":
             coffee="expresso"
             a,b,chk=check(a,b,0,2)
             if chk==0:
-                print('Insufficient quantity 2')
+                print('Insufficient quantity')
                 continue
             p=p1
         elif val=="cappuccino":
@@ -84,7 +84,7 @@ report - to get details on remaining resources""")
         
             a,b,c,chk=check(a,b,c,3)
             if chk==0:
-                print('Insufficient quantity 3')
+                print('Insufficient quantity')
                 continue
             p=p3
         change = total-p
